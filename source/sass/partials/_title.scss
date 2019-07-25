@@ -1,0 +1,4 @@
+.title {
+  @include style-reset;
+  @include font-style(24px, 26px, 700, #ff8d30);
+}

@@ -1,0 +1,22 @@
+.social-list {
+  @include default-list;
+}
+
+.social-list--item {
+  
+}
+
+.social-list--link {
+  @include style-reset;
+  &--fb {
+    
+  }
+  
+  &--vk {
+    
+  }
+  
+  &--inst {
+    
+  }
+}

@@ -1,0 +1,61 @@
+.level {
+  @include style-reset;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: #0b151a;
+  border-radius: 50%;
+}
+  
+.level--80 .level__pie {
+    @include level(80);
+}
+
+.level--99 .level__pie {
+    @include level(99);
+}
+
+.level__pie {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 60px;
+  height: 60px;
+  clip: rect(0, 60px, 60px, 30px);
+}
+
+.level__half-circle { 
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 60px;
+  height: 60px;
+  border: 3px solid #ff8d30;
+  border-radius: 50%;
+  clip: rect(0, 30px, 60px, 0);
+}
+
+.level__numb {
+  @include style-reset;
+  @include font-style(24px, 24px, 700);
+  display: block;
+  height: 24px;
+  width: 38px;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 3px;
+}
+
+.level__text {
+  @include style-reset;
+  @include font-style(14px, 14px, 400);
+  width: 31px;
+  height: 17px;
+  padding-top: 3px;
+  display: block;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+}

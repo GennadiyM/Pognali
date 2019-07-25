@@ -1,0 +1,67 @@
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin style-reset {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin default-list {
+  @include style-reset;
+  list-style: none;
+}
+
+@mixin get-size($height, $width: auto) {
+  width: $width;
+  min-height: $height;
+}
+
+@mixin bg-image($url, $x, $y, $size: contain) {
+  background-image: url('../img/' + $url);
+  background-repeat: no-repeat;
+  background-position: $x $y;
+  background-size: $size;
+}
+
+@mixin font-style($size, $height, $weight: $primary-font-weight, $color: $primary-font-color) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin pseudo-element($width, $height, $content: '') {
+  position: absolute;
+  display: block;
+  width: $width;
+  height: $height;
+  content: $content;
+}
+
+@mixin level($level) {
+  .level__half-circle--left-side {
+    transform: rotate($level * 3.6deg);
+  }
+
+  @if $level <= 50 {
+    .level__half-circle--right-side {
+      display: none;
+    }
+  } @else {
+    clip: rect(auto, auto, auto, auto);
+    .level__half-circle--right-side {
+      transform: rotate(180deg);
+    }
+  }
+}

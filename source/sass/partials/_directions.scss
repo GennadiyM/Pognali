@@ -1,0 +1,62 @@
+.directions {
+  width: 100%;
+  background-color: $primary-bg-color;
+}
+
+.directions__content-container {
+  width: 100%;
+  max-width: $mobile-max-width;
+  padding-top: 72px;
+  margin: 0 auto;
+}
+
+.directions__wrapper {
+  width: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: $second-bg-color;
+  padding-bottom: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.directions__title {
+  padding-left: 24px;
+  margin-bottom: 20px;
+}
+
+.directions__info {
+  @include style-reset;
+  @include get-size(113px, 81%);
+  @include font-style(16px, 22px, 300, #444444);
+  padding-left: 24px;
+  margin-bottom: 65px;
+}
+
+.descriptions__countries-list {
+  @include default-list;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+  
+  &::after {
+    @include pseudo-element(100%, 81px);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url('../img/fade.png');
+    background-repeat: repeat-x;
+    z-index: 2;
+  }
+}
+ 
+.descriptions__country {
+  @include get-size(189px, 100%);
+  margin-bottom: 10px;
+}
+
+.descriptions__button {
+  width: 100%;
+}

@@ -1,0 +1,31 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  @include style-reset;
+  position: relative;
+  min-width: 320px;
+  font-family: $font-stack;
+  font-style: normal;
+  font-size: $primary-font-size;
+  font-weight: $primary-font-weight;
+  line-height: $primary-font-line-hieght;
+  color: $primary-font-color;
+  background-color: $primary-bg-color;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

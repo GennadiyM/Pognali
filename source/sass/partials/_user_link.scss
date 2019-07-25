@@ -1,0 +1,27 @@
+.user-link {
+  @include style-reset;
+  max-width: 240px;
+  min-height: 23px;
+  display: block;
+}
+
+.user-link__title {
+  @include style-reset;
+  @include font-style(21px, 23px, 700, #1d2e5b);
+  display: block;
+  position: relative;
+  padding-left: 17px;
+
+  &::before{
+    @include pseudo-element(5px, 5px);
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #f97676;
+    border-radius: 50%;
+  }
+
+  &--online::before {
+    background-color: #81e31e;
+  }
+}
