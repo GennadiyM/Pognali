@@ -1,0 +1,184 @@
+.additional-nav {
+  @include default-list;
+  position: relative;
+  width: 270px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 0;
+}
+
+.additional-nav__item {
+  @include get-size(45px, 100%);
+  display: flex;
+  align-items: center;
+}
+
+.additional-nav__ico {
+  display: block;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #121936;
+  margin-right: 17px;
+  transition: background 0.2s;
+}
+
+.additional-nav__link-text {
+  @include get-size(30px, 210px);
+  display: block;
+  padding-top: 9px;
+  transition: fill 0.2s ease 0s, color 0.2s ease 0s;
+}
+
+.additional-nav__ico svg {
+  width: 23px;
+  height: 23px;
+  transition: fill 0.2s ease 0s, opacity 0.2s ease 0s;
+}
+
+.additional-nav__link {
+  @include style-reset;
+  @include font-style(17px, 30px, 700, #192144);
+  @include get-size(45px, 100%);
+  display: flex;
+  align-items: flex-start;
+  text-transform: uppercase;
+
+  &--auth {
+    @include get-size(50px, 270px);
+    justify-content: center;
+    text-align: center;
+    border-radius: 25px;
+    background-color: $bg-color-button;
+    overflow: hidden;
+    margin-bottom: 47px;
+    transition: background 0.2s;
+  }
+
+  &--email,
+  &--tel {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.additional-nav__link {  
+  &:hover,
+  &:focus {
+    color: #ffbd30;
+    outline: none;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: #ffbd30;
+  }
+
+  &:active svg,
+  &:active .additional-nav__link-text {
+    opacity: 0.3;
+  }
+
+  &--auth:hover,
+  &--auth:focus {
+    background-color: #ffbd30;
+    color: $second-font-color;
+  }
+}
+
+.additional-nav--about-us {
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.additional-nav--about-us .additional-nav__item {
+  @include get-size(40px, 100%);
+}
+
+.additional-nav--about-us .additional-nav__item--tel,
+.additional-nav--about-us .additional-nav__item--email {
+  @include get-size(40px, 40px);
+}
+
+.additional-nav--about-us .additional-nav__item--auth {
+  @include get-size(40px);
+  flex-grow: 1;
+}
+
+.additional-nav--about-us .additional-nav__ico {
+  width: 40px;
+  height: 40px;
+  background-color: $bg-color-button;
+  margin-right: 0;
+}
+
+.additional-nav--about-us svg {
+  width: 18px;
+  height: 18px;
+}
+
+.additional-nav--about-us .additional-nav__link-text {
+  @include get-size(30px);
+  display: block;
+  padding-top: 3px;
+}
+
+.additional-nav--about-us .additional-nav__link {
+  @include get-size(40px, 100%);
+
+  &--auth {
+    @include get-size(40px, 100%);
+    border-radius: 20px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  &--tel .additional-nav__ico {  
+    background-color: #ff8d30;
+  }
+
+  &--tel,
+  &--email {
+    font-size: 0;
+    line-height: 0;
+  }
+}
+
+.additional-nav--about-us .additional-nav__link {
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+
+  &--auth:hover,
+  &--auth:focus {
+    background-color: #ffbd30;
+    color: $second-font-color;
+  }
+
+  &--email:hover .additional-nav__ico,
+  &--email:focus .additional-nav__ico {
+    background-color: #ff8d30;
+  }
+
+  &--tel:hover .additional-nav__ico,
+  &--tel:focus .additional-nav__ico{
+    background-color: #f26926;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: #161c35;
+  }
+
+  &:active svg,
+  &:active .additional-nav__link-text {
+    opacity: 0.3;
+  }
+}

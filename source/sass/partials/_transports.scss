@@ -1,0 +1,50 @@
+.transports {
+  @include default-list;
+  max-width: 240px;
+  min-height: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.transports__item {
+  flex-shrink: 0;
+  margin-right: 15px;
+  opacity: 0.3;
+  margin-bottom: 10px;
+
+  &--active {
+    opacity: 1;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  } 
+}
+
+.transports__type {
+  display: block;
+  height: 21px;
+  font-size: 0;
+
+  &--plain {
+    width: 19px;
+    @include bg-image('plane.svg', center, center, auto);
+  }
+
+  &--bus {
+    width: 17px;
+    @include bg-image('bus.svg', center, center, auto);
+  }
+
+  &--bicycle {
+    width: 24px;
+    @include bg-image('bike.svg', center, center, auto);
+  }
+
+  &--walk {
+    width: 20px;
+    @include bg-image('run.svg', center, center, auto);
+  }
+}

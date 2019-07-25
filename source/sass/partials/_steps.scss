@@ -1,0 +1,66 @@
+.steps {
+  @include default-list;
+  @include get-size(320px, 100%);
+  max-width: $mobile-max-width;
+  display: flex;
+  flex-direction: column;
+}
+
+.steps__item {
+  @include get-size(100px, 100%);
+  position: relative;
+  border-radius: 10px;
+  padding: 20px 40px 30px 25px;
+
+  &--first {
+    background-color: #ff8d30;
+  }
+
+  &--second {
+    background-color: #ffa530;
+    margin-top: -20px;
+  }
+
+  &--third {
+    background-color: #ffbd30;
+    margin-top: -20px;
+  }
+
+  &--fourth {
+    background-color: #ffd74b;
+    margin-top: -20px;
+  }
+
+  &::after {
+    @include font-style(18px, 20px, 700);
+    top: 20px;
+    right: 15px;
+  }
+}
+
+.steps__item--first::after {
+  @include pseudo-element(20px, 20px, '1');
+}
+
+.steps__item--second::after {
+  @include pseudo-element(20px, 20px, '2');
+}
+
+.steps__item--third::after {
+  @include pseudo-element(20px, 20px, '3');
+}
+
+.steps__item--fourth::after {
+  @include pseudo-element(20px, 20px, '4');
+}
+
+.steps__title {
+  @include style-reset;
+  @include font-style(18px, 20px, 700, $second-font-color);
+  @include get-size(40px, 155px);
+  overflow: hidden;
+
+  &--short {
+    width: 143px;
+  }
+}

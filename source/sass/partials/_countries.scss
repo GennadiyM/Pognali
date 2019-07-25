@@ -1,0 +1,46 @@
+.countries {
+  @include get-size(24px, 230px);
+  @include default-list;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.countries__item {
+  margin-right: 19px;
+  margin-bottom: 10px;
+  flex-shrink: 0;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+  
+}
+
+.countries__flag {
+  display: block;
+  width: 35px;
+  height: 24px;
+  font-size: 0;
+  
+  &--sri-lanka {
+    @include bg-image('sri_lanka@1x.png', center, center, auto);
+  }
+  &--thailand {
+    @include bg-image('thailand@1x.png', center, center, auto);
+  }
+  &--seyshelles {
+    @include bg-image('seyshelles@1x.png', center, center, auto);
+  }
+  &--belgium {
+    @include bg-image('belgium@1x.png', center, center, auto);
+  }
+  &--czech {
+    @include bg-image('czech@1x.png', center, center, auto);
+  }
+}

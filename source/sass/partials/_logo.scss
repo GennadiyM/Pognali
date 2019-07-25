@@ -1,0 +1,10 @@
+.logo {
+  @include style-reset;
+  display: block;
+  width: 100px;
+  height: 19px;
+}
+
+.logo__img {
+  display: none;
+}

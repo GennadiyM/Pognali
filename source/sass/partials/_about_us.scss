@@ -1,0 +1,93 @@
+.about-us {
+  width: 100%;
+  margin: -385px auto 0;
+  background-color: $second-bg-color;
+}
+
+.about-us__wrapper {
+  width: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: $primary-bg-color;
+  padding-bottom: 88px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  @include bg-image('about-mobile@1x.png', bottom, center);
+}
+
+.about-us__content-container {
+  width: 100%;
+  max-width: $mobile-max-width;
+  margin: 0 auto;
+}
+
+.about-us__slogan {
+  @include style-reset;
+  @include font-style(36px, 40px, 700);
+  @include get-size(115px, 100%);
+  position: relative;
+  display: block;
+  text-align: center;
+  margin: 0 auto 245px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.about-us__additional-nav {
+  margin-bottom: 15px;
+}
+
+.about-us__blockquote-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about-us__blockquote-text {
+  @include style-reset;
+  @include font-style(16px, 22px, 300);
+  @include get-size(44px, 57.4%);
+  display: block;
+  margin-bottom: 25px;
+}
+
+.about-us__blockquote-author {
+  @include style-reset;
+  @include font-style(16px, 22px, 700);
+  @include get-size(22px);
+  display: block;
+  font-style: normal;
+}
+
+.about-us__blockquote-author-info {
+  @include style-reset;
+  @include font-style(16px, 22px, 700);
+  @include get-size(66px, 57.4%);
+  display: block;
+  margin-bottom: 35px;
+}
+
+.about-us__steps {
+  margin: 0 auto 70px;
+}
+
+.about-us__description {
+  @include get-size(296px, 88%);
+  padding-left: 24px;
+}
+
+.about-us__title {
+  margin-bottom: 25px;
+}
+
+.about-us__text {
+  @include style-reset;
+  @include font-style(16px, 22px, 300);
+  margin-bottom: 25px;
+  
+  &--bold {
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,23 @@
+.button {
+  @include style-reset;
+  @include font-style(18px, 18px, 700, #192144);
+  @include get-size(62px, 270px);
+  display: block;
+  position: relative;
+  display: block;
+  padding: 24px 45px 25px 24px;
+  background-color: $bg-color-button;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  
+  &::after {
+    @include pseudo-element(20px, 14px);
+    border-left: 10px solid #192144;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    top: 50%;
+    right: 13px;
+    transform: translateY(-50%);
+  }
+}
