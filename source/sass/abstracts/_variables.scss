@@ -1,4 +1,4 @@
-$font-stack: 'blogger', 'Arial', sans-serif;
+$font-stack: "blogger", "Arial", sans-serif;
 $primary-font-size: 16px;
 $primary-font-weight: 300;
 $primary-font-line-hieght: 22px;
@@ -10,13 +10,13 @@ $second-bg-color: #edeff6;
 $bg-color-button: #ffd74b;
 
 $breakpoints: (
-  'medium': (min-width: 768px),
-  'large': (min-width: 1200px ),
+  "medium": (min-width: 768px),
+  "large": (min-width: 1200px ),
 );
 
 $mobile-max-width: 500px;
 
 $retina: (
-  'dpi': 144dpi,
-  'dppx': 1.5dppx,
+  "dpi": 144dpi,
+  "dppx": 1.5dppx,
 );

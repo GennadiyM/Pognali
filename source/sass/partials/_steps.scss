@@ -28,30 +28,32 @@
 
   &--fourth {
     background-color: #ffd74b;
+    min-height: 80px;
+    padding-bottom: 20px;
     margin-top: -20px;
   }
 
   &::after {
     @include font-style(18px, 20px, 700);
     top: 20px;
-    right: 15px;
+    right: 11px;
   }
 }
 
 .steps__item--first::after {
-  @include pseudo-element(20px, 20px, '1');
+  @include pseudo-element(20px, 20px, "1");
 }
 
 .steps__item--second::after {
-  @include pseudo-element(20px, 20px, '2');
+  @include pseudo-element(20px, 20px, "2");
 }
 
 .steps__item--third::after {
-  @include pseudo-element(20px, 20px, '3');
+  @include pseudo-element(20px, 20px, "3");
 }
 
 .steps__item--fourth::after {
-  @include pseudo-element(20px, 20px, '4');
+  @include pseudo-element(20px, 20px, "4");
 }
 
 .steps__title {

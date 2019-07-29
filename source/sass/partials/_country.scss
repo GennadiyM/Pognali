@@ -11,6 +11,34 @@
 
 .country__link {
   @include style-reset;
+  display: block;
+  width: 100%;
+  height: 110px;
+  transition: all 0.2s;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    filter: grayscale(100%);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.country__title-link {
+  transition: opacity 0.2s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .country__info {
@@ -21,24 +49,24 @@
   background-color: #ffffff;
   padding: 25px 25px 10px;
   z-index: 1;
-  
+
   &::before {
     @include pseudo-element(35px, 24px);
     top: 0;
     left: 25px;
     transform: translateY(-50%);
   }
-}
 
-.country__info {
   &--france::before {
-    @include bg-image('france@1x.png', center, center, 35px 24px);
+    @include bg-image("france@1x.png", center, center, 35px 24px);
   }
+
   &--thailand::before {
-    @include bg-image('thailand@1x.png', center, center, 35px 24px);
+    @include bg-image("thailand@1x.png", center, center, 35px 24px);
   }
+
   &--czech::before {
-    @include bg-image('czech@1x.png', center, center, 35px 24px);
+    @include bg-image("czech@1x.png", center, center, 35px 24px);
   }
 }
 
@@ -61,18 +89,18 @@
 .country__visitors {
   @include style-reset;
   @include font-style(16px, 18px, 500, #444444);
-  @include get-size(18px, 70px);
+  min-height: 18px;
   position: relative;
   display: block;
   flex-shrink: 0;
   overflow: hidden;
   text-align: right;
-  padding-left: 11px;
+  padding-left: 16px;
   opacity: 0.3;
-  
+
   &::before {
     @include pseudo-element(11px, 11px);
-    @include bg-image('user.svg', center, center, 11px 11px);
+    @include bg-image("user.svg", center, center, 11px 11px);
     top: 50%;
     left: 0;
     transform: translateY(-50%);

@@ -1,16 +1,5 @@
 .directions {
-  width: 100%;
-  background-color: $primary-bg-color;
-}
-
-.directions__content-container {
-  width: 100%;
-  max-width: $mobile-max-width;
-  padding-top: 72px;
-  margin: 0 auto;
-}
-
-.directions__wrapper {
+  position: relative;
   width: 100%;
   padding-left: 25px;
   padding-right: 25px;
@@ -18,6 +7,16 @@
   padding-bottom: 30px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+  padding-top: 31px;
+  margin-top: -35px;
+  z-index: 4;
+}
+
+.directions__content-container {
+  width: 100%;
+  max-width: $mobile-max-width;
+  padding-top: 72px;
+  margin: 0 auto;
 }
 
 .directions__title {
@@ -30,7 +29,7 @@
   @include get-size(113px, 81%);
   @include font-style(16px, 22px, 300, #444444);
   padding-left: 24px;
-  margin-bottom: 65px;
+  margin-bottom: 58px;
 }
 
 .descriptions__countries-list {
@@ -39,19 +38,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 25px;
-  
+  margin-bottom: 16px;
+
   &::after {
     @include pseudo-element(100%, 81px);
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: url('../img/fade.png');
+    background-image: url("../img/fade.png");
     background-repeat: repeat-x;
     z-index: 2;
   }
 }
- 
+
 .descriptions__country {
   @include get-size(189px, 100%);
   margin-bottom: 10px;

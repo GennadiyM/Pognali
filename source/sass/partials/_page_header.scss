@@ -1,16 +1,10 @@
 .page-header {
-  position: relative;
-  min-height: 478px;
-  background-image: url('../img/traveller-illustration-mobile@1x.png'), url('../img/globe-back-mobile@1x.jpg');
-  background-repeat: no-repeat, no-repeat;
-  background-position: center bottom, center bottom;
-  background-size: auto, cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 73px;
 }
 
 .page-header__main-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  z-index: 8;
 }

@@ -1,4 +1,22 @@
 .title {
   @include style-reset;
   @include font-style(24px, 26px, 700, #ff8d30);
+
+  &--add-profile {
+    position: relative;
+    padding-right: 50%;
+    min-height: 78px;
+
+    &::after {
+      @include pseudo-element(99px, 99px);
+      @include bg-image("rates@1x.png", center, center);
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &--modal {
+    text-align: center;
+  }
 }

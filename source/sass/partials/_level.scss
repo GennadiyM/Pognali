@@ -1,3 +1,4 @@
+
 .level {
   @include style-reset;
   display: flex;
@@ -9,13 +10,13 @@
   background-color: #0b151a;
   border-radius: 50%;
 }
-  
+
 .level--80 .level__pie {
-    @include level(80);
+  @include level-max(80);
 }
 
 .level--99 .level__pie {
-    @include level(99);
+  @include level-max(99);
 }
 
 .level__pie {
@@ -27,7 +28,7 @@
   clip: rect(0, 60px, 60px, 30px);
 }
 
-.level__half-circle { 
+.level__half-circle {
   position: absolute;
   left: 0;
   top: 0;

@@ -1,10 +1,8 @@
 .logo {
   @include style-reset;
+  @include bg-image("logo-mobile-blue@1x.png", center, center);
   display: block;
   width: 100px;
   height: 19px;
-}
-
-.logo__img {
-  display: none;
+  font-size: 0;
 }

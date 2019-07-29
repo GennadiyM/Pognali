@@ -1,40 +1,53 @@
 .about-us {
+  @include bg-image("about-mobile@1x.png", bottom, center);
+  position: relative;
   width: 100%;
-  margin: -385px auto 0;
-  background-color: $second-bg-color;
-}
-
-.about-us__wrapper {
-  width: 100%;
-  padding-left: 25px;
-  padding-right: 25px;
   background-color: $primary-bg-color;
-  padding-bottom: 88px;
+  padding-bottom: 27px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
-  @include bg-image('about-mobile@1x.png', bottom, center);
+  padding-top: 90px;
+  z-index: 5;
+
+  &::before {
+    @include pseudo-element(100%, 478px);
+    top: 0;
+    left: 0;
+    background-image: url("../img/traveller-illustration-mobile@1x.png"), url("../img/globe-back-mobile@1x.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 61% 223px, left 0 bottom -90px;
+    background-size: auto, cover;
+  }
 }
 
 .about-us__content-container {
+  position: relative;
   width: 100%;
+  height: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
   max-width: $mobile-max-width;
   margin: 0 auto;
+  z-index: 2;
 }
 
 .about-us__slogan {
   @include style-reset;
   @include font-style(36px, 40px, 700);
-  @include get-size(115px, 100%);
+  @include get-size(115px, 97%);
   position: relative;
   display: block;
   text-align: center;
-  margin: 0 auto 245px;
+  margin: 0 auto 247px;
   overflow: hidden;
   z-index: 0;
 }
 
-.about-us__additional-nav {
-  margin-bottom: 15px;
+.about-us__nav-container {
+  @include get-size(40px, 100%);
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
 }
 
 .about-us__blockquote-container {
@@ -42,6 +55,14 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding-left: 25px;
+  margin-bottom: 11px;
+}
+
+.about-us__user-nav {
+  margin: 0;
+  flex-shrink: 0;
+  flex-grow: 1;
 }
 
 .about-us__blockquote-text {
@@ -49,7 +70,8 @@
   @include font-style(16px, 22px, 300);
   @include get-size(44px, 57.4%);
   display: block;
-  margin-bottom: 25px;
+  width: 68%;
+  margin-bottom: 17px;
 }
 
 .about-us__blockquote-author {
@@ -65,27 +87,27 @@
   @include font-style(16px, 22px, 700);
   @include get-size(66px, 57.4%);
   display: block;
-  margin-bottom: 35px;
+  width: 70%;
 }
 
 .about-us__steps {
-  margin: 0 auto 70px;
+  margin: 0 auto 68px;
 }
 
 .about-us__description {
-  @include get-size(296px, 88%);
-  padding-left: 24px;
+  @include get-size(296px, 87%);
+  padding-left: 23px;
 }
 
 .about-us__title {
-  margin-bottom: 25px;
+  margin-bottom: 19px;
 }
 
 .about-us__text {
   @include style-reset;
   @include font-style(16px, 22px, 300);
-  margin-bottom: 25px;
-  
+  margin-bottom: 19px;
+
   &--bold {
     font-weight: 700;
     margin-bottom: 0;
