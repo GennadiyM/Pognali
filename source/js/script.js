@@ -6,6 +6,7 @@
 
   const selector = {
     BUTTON_MENU: `.js-menu-toggle`,
+    HEADER: `.page-header`,
     MENU: `.main-nav`,
     BUTTON_OPEN_TARIFF: `.js-link-tariff-open`,
     BUTTON_CLOSE_TARIFF: `.js-link-tariff-close`,
@@ -13,21 +14,22 @@
   };
 
   const clases = {
-    NOJS: `main-nav--nojs`,
+    NOJS: `page-header--nojs`,
     OPENED: `main-nav--opened`,
     CLOSED: `main-nav--closed`,
     SCROLL: `main-nav--scroll`,
     TARIF_OPEN: `price__modal--show`,
   }
 
+  const header = document.querySelector(selector.HEADER);
   const menu = document.querySelector(selector.MENU);
   const button = document.querySelector(selector.BUTTON_MENU);
   const tariffModal = document.querySelector(selector.TARIFF_MODAL);
   const buttonOpenTariff = document.querySelector(selector.BUTTON_OPEN_TARIFF);
   const buttonCloseTariff = document.querySelector(selector.BUTTON_CLOSE_TARIFF);
 
-  if (menu.classList.contains(clases.NOJS)){
-    menu.classList.remove(clases.NOJS);
+  if (header.classList.contains(clases.NOJS)){
+    header.classList.remove(clases.NOJS);
   }
 
   setTimeout(function() {

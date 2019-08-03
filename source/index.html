@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="page-header">
-      <nav class="main-nav main-nav--nojs page-header__main-nav">
+    <header class="page-header page-header--nojs">
+      <nav class="main-nav page-header__main-nav">
         <a class="logo main-nav__logo">
           Погнали?
         </a>
@@ -137,15 +137,16 @@
           </ul>
           <div class="about-us__description">
             <h2 class="title about-us__title">О сервисе</h2>
-            <p class="about-us__text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
-            <p class="about-us__text about-us__text--bold">А если найдете кого-то близкого по духу - скорее зовите в совместный трип!</p>
+            <p class="about-us__text">Любое путешествие веселее<br> с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
+            <p class="about-us__text about-us__text--bold">А если найдете кого-то близкого по духу - скорее зовите <span class="about-us__text about-us__text--bold about-us__text--invisible">его</span> в совместный трип!</p>
           </div>
+          <a href="#" class="button button--about-us about-us__button">Подробнее</a>
         </div>
       </section>
       <section class="directions">
         <div class="directions__content-container">
           <h2 class="title directions__title">Направления</h2>
-          <p class="directions__info">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
+          <p class="directions__info">Мы не продаем туры<br> и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
           <ul class="descriptions__countries-list">
             <li class="descriptions__country">
               <article class="country">
@@ -203,8 +204,8 @@
         <section class="companions z-index-container__companions">
           <div class="companions__content-container">
             <h2 class="companions__title title">Попутчики</h2>
-            <p class="companions__info">Все мы индивидуальны и у каждого свой взгляд на идефльный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-            <p class="companions__info companions__info--bold">Теперь можно легко найти единомышленников!</p>
+            <p class="companions__info">Все мы индивидуальны и у каждого свой взгляд на идефльный отдых. Одному нужен пляж и коктейль,<br> а другому маршрут для хайкинга.</p>
+            <p class="companions__info companions__info--bold">Теперь можно легко<br> найти единомышленников!</p>
             <ul class="companions__list">
               <li class="companions__list-item">
                 <article class="companion">
@@ -339,54 +340,40 @@
         <section class="price z-index-container__price">
         <div class="price__content-container">
           <h2 class="price__title visually-hidden">Тарифы и услуги</h2>
-          <p class="title title--add-profile price__title">Добавтьте свой профиль</p>
+          <p class="title title--add-profile price__title">Добавьте свой профиль!</p>
           <table class="price__table">
             <tr class="price__tr">
               <th class="price__th price__th--first">Базовое размещение</th>
-              </tr>
-              <tr>
               <td class="price__td">Бесплатно</td>
             </tr>
             <tr class="price__tr">
               <th class="price__th price__th--second">Вывод на первых позициях</th>
-              </tr>
-              <tr>
               <td class="price__td">99 руб./мес</td>
             </tr>
             <tr class="price__tr">
               <th class="price__th price__th--third">Кастомный цвет карточки</th>
-              </tr>
-              <tr>
-              <td class="price__td">99 руб./мес</td>
+              <td class="price__td">59 руб./мес</td>
             </tr>
           </table>
-          <a class="price__link js-link-tariff-open" href="#">Показать тарифы для бизнеса</a>
+          <a class="price__link price__link--open js-link-tariff-open" href="adress">Показать тарифы для бизнеса</a>
           <div class="price__modal js-tariff-modal">
             <h3 class="title title--modal price__title">Бизнес-тарифы</h3>
             <table class="price__table price__table--modal">
               <tr class="price__tr">
                 <th class="price__th">Реклама у блоггера</th>
-              </tr>
-              <tr>
-              <td class="price__td">300 000 руб./пост</td>
+                <td class="price__td">300 000 руб./пост</td>
               </tr>
               <tr class="price__tr">
                 <th class="price__th">Накрутка подписчиков</th>
-              </tr>
-              <tr>
-              <td class="price__td">от 1 руб./шт.</td>
+                <td class="price__td">от 1 руб./шт.</td>
               </tr>
               <tr class="price__tr">
                 <th class="price__th">Лайки от ботов</th>
-              </tr>
-              <tr>
-              <td class="price__td">от 20 коп./лайк</td>
+                <td class="price__td">от 20 коп./лайк</td>
               </tr>
               <tr class="price__tr">
                 <th class="price__th">Ваш продакт-плейсмент</th>
-              </tr>
-              <tr>
-              <td class="price__td">Индивидуально</td>
+                <td class="price__td">Индивидуально</td>
               </tr>
             </table>
             <button class="price__link price__link--close js-link-tariff-close">Закрыть окно</button>
@@ -398,13 +385,13 @@
         <div class="feedback__content-container">
           <h2 class="title feedback__title">Заинтересовались?</h2>
           <p class="feedback__text feedback__text--top">Зарегистрируйтесь,<span class="feedback__new-line"> это быстро и бесплатно!</span></p>
-          <p class="feedback__text feedback__text--bottom">Уже зарегестрированы? Тогда скорее <a href="#" class="feedback__link">авторизуйтесь</a>.</p>
+          <p class="feedback__text feedback__text--bottom">Уже зарегистрированы? Тогда скорее <a href="#" class="feedback__link">авторизуйтесь</a>.</p>
           <div class="feedback__register">
             <input class="feedback__input" type="email" placeholder="E-mail" required>
             <button class="button button--feedback feedback__button">Регистрация</button>
-            </div>
-          <p class="feedback__text">Остались вопросы?</p>
-          <p class="feedback__text">Мы с радостью на них ответим</p>
+          </div>
+          <p class="feedback__text">Остались вопросы?<br>
+          Мы с радостью на них ответим!</p>
           <ul class="additional-nav additional-nav--feedback feedback__additional-nav">
             <li class="additional-nav__item">
               <a href="tel:88005558628" class="additional-nav__link additional-nav__link--tel" aria-label="наш телефон">
@@ -437,7 +424,7 @@
           </div>
         </div>
         <div class="map__map-container">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2826.3760912873995!2d30.320049407596095!3d59.93961390589656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1564404205526!5m2!1sru!2sru" width="2000" height="333" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2826.3760912873995!2d30.320049407596095!3d59.93961390589656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1564404205526!5m2!1sru!2sru" width="2000" height="591" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
       </section>
     </main>

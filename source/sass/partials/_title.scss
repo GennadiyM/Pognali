@@ -20,3 +20,18 @@
     text-align: center;
   }
 }
+
+@media ($breakpoints-medium) {
+  .title {
+    @include font-style(45px, 47px, 700, #ff8d30);
+
+    &--add-profile {
+      padding-right: 16%;
+      text-align: right;
+      
+      &::after {
+        display: none;
+      }
+    }
+  }
+}

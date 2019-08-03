@@ -7,8 +7,8 @@
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   background-color: #ffffff;
-  margin-top: -67px;
-  padding: 37px 25px 10px;
+  margin-top: -161px;
+  padding: 36px 25px 10px;
   z-index: 4;
 }
 
@@ -24,4 +24,34 @@
   width: 100%;
   max-width: $mobile-max-width;
   margin: 0 auto;
+}
+
+@media ($breakpoints-medium) {
+  .page-footer {
+    min-height: 155px;
+    min-width: 768px;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    padding: 48px 40px 45px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 0;
+  }
+  
+  .page-footer__logo {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .page-footer__social-list {
+    margin-bottom: 0;
+    flex-shrink: 0;
+    margin-left: -10px;
+  }
+
+  .page-footer__copyright {
+    width: 154px;
+    max-width: none;
+    margin: 0;
+  }
 }

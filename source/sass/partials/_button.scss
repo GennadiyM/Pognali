@@ -53,4 +53,37 @@
       right: 10px;
     }
   }
+  
+  &--about-us {
+    width: 274px;
+    height: 81px;
+    border-radius: 20px;
+    padding: 27px 45px 21px 33px;
+
+    &::after {
+      right: 25px;
+    }
+  }
+}
+
+@media ($breakpoints-medium) {
+  .button {
+    @include font-style(24px, 24px, 700, #192144);
+    min-height: 81px;
+    border-radius: 20px;
+    padding: 26px 55px 23px 34px;
+
+    &::after {
+      right: 25px;
+    }
+    
+    &--feedback {
+      width: 82px;
+      height: 81px;
+      font-size: 0;
+      padding: 0;
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
+  }
 }

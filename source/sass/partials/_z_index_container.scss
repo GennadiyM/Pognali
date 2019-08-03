@@ -1,9 +1,17 @@
 .z-index-container {
   position: relative;
   z-index: 3;
+  margin-top: -35px;
 }
 
 .z-index-container__companions {
   position: relative;
   z-index: 1;
+}
+
+@media ($breakpoints-medium) {
+  .z-index-container {
+    margin-top: -60px;
+    min-width: 768px;
+  }
 }

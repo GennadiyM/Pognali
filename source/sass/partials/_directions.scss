@@ -59,3 +59,47 @@
 .descriptions__button {
   width: 100%;
 }
+
+@media ($breakpoints-medium) {
+  .directions {
+    padding-left: 40px;
+    padding-right: 40px;
+    min-width: 768px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    padding-bottom: 81px;
+  }
+
+  .directions__content-container {
+    max-width: none;
+    padding-left: 34px;
+    padding-right: 35px;
+  }
+
+  .directions__title {
+    padding-left: 0;
+    margin-bottom: 58px;
+  }
+
+  .directions__info {
+    @include get-size(165px, 56%);
+    @include font-style(28px, 33px, 300, #444444);
+    padding-left: 0;
+    margin-bottom: 107px;
+  }
+
+  .descriptions__country {
+    @include get-size(140px, 100%);
+    margin-bottom: 10px;
+  }
+
+  .descriptions__countries-list {
+    margin-bottom: 36px;
+  }
+}
+
+@media (min-width: 321px) {
+  .descriptions br {
+    display: none;
+  }
+}

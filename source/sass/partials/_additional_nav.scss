@@ -166,3 +166,114 @@
     opacity: 0.3;
   }
 }
+
+@media ($breakpoints-medium) {
+  .additional-nav__item {
+    @include get-size(68px, 400px);
+  }
+
+  .additional-nav__link {
+    @include get-size(68px, 100%);
+    font-size: 28px;
+  }
+
+  .additional-nav__link--tel svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .additional-nav__ico {
+    width: 68px;
+    height: 68px;
+    margin-right: 23px;
+  }
+
+  .additional-nav__link--email svg {
+    width: 27px;
+    height: 20px;
+  }
+
+  .additional-nav__link-text {
+    padding-top: 25px;
+  }
+}
+
+@media ($breakpoints-large) {
+  .additional-nav__link-text {
+    display: none;
+  }
+  .additional-nav svg {
+    display: none;
+  }
+  .additional-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    width: 100px;
+  }
+
+  .additional-nav__item {
+    @include get-size(50px, 50px);
+    margin: 0;
+  }
+
+  .additional-nav__ico {
+    width: 50px;
+    height: 50px;
+    background-color: $bg-color-button;
+    margin: 0;
+  }
+
+  .additional-nav__link {
+    position: relative;
+    @include get-size(50px, 50px);
+
+    &--tel .additional-nav__ico {
+      background-color: #ff8d30;
+    }
+
+    &--tel::before {
+      @include pseudo-element(50px, 50px);
+      @include bg-image("topmenu-phone.svg", center, center, 18px 18px);
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    &--email::before {
+      @include pseudo-element(50px, 50px);
+      @include bg-image("topmenu-mail.svg", center, center, 18px 14px);
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    &--tel,
+    &--email {
+      font-size: 0;
+      line-height: 0;
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+    }
+
+    &--auth:hover,
+    &--auth:focus {
+      background-color: #ffbd30;
+    }
+
+    &--email:hover .additional-nav__ico,
+    &--email:focus .additional-nav__ico {
+      background-color: #ff8d30;
+    }
+
+    &--tel:hover .additional-nav__ico,
+    &--tel:focus .additional-nav__ico {
+      background-color: #f26926;
+    }
+  }
+}

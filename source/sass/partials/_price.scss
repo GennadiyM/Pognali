@@ -39,7 +39,7 @@
 
 .price__table {
   width: 81.9%;
-  border-bottom: 1px solid rgba(81, 90, 95, 0.05);
+  border-bottom: 1px solid rgba(81, 90, 95, 0.5);
   border-collapse: collapse;
   margin-bottom: 27px;
 
@@ -51,14 +51,18 @@
 
 .price__tr {
   width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-top: 1px solid rgba(81, 90, 95, 0.5);
 }
 
 .price__th {
   @include font-style(16px, 20px, 300, #444444);
-  position: relative;
+  display: block;
   width: 100%;
   text-align: left;
-  border-top: 1px solid rgba(81, 90, 95, 0.05);
   padding-top: 11px;
 
   &--first {
@@ -94,6 +98,7 @@
 
 .price__td {
   @include font-style(16px, 22px, 300, #444444);
+  display: block;
   width: 100%;
   padding-bottom: 10px;
 }
@@ -101,16 +106,31 @@
 .price__link {
   @include style-reset;
   @include font-style(16px, 18px, 700, #192144);
-  transition: opacity 0.2s;
+  transition: color 0.2s;
 
   &:hover,
   &:focus {
-    opacity: 0.7;
+    color: #7178a2;
     outline: none;
   }
 
+  &--open {
+    &::before {
+      transition: opacity 0.2s;
+    }
+    
+    &:hover::before,
+    &:focus::before {
+      opacity: 0.7;
+    }
+    
+    &:active::before {
+      opacity: 0.3;
+    }
+  }
+  
   &:active {
-    opacity: 0.3;
+    color: #c8cbdb;
   }
 
   &--close {
@@ -133,6 +153,130 @@
     &:active {
       color: #bec1d5;
       opacity: 1;
+    }
+  }
+}
+
+@media ($breakpoints-medium) {
+  .price {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    margin-top: -60px;
+    padding-top: 60px;
+  }
+  
+  .price__title {
+    margin-bottom: 46px;
+  }
+
+  .price__content-container {
+    max-width: none;
+    padding: 68px 25px 86px 50px;
+    margin: 0 auto;
+  }
+
+  .price__table {
+    width: 85%;
+    margin-bottom: 57px;
+    margin-left: 80px;
+    
+    &--modal {
+      width: 73%;
+    }
+  }
+
+  .price__tr {
+    flex-direction: row;
+  }
+
+  .price__th {
+    @include font-style(28px, 33px, 300, #444444);
+    width: 66%;
+    padding-top: 13px;
+    padding-bottom: 19px;
+    
+    &::after {
+      width: 67px;
+      height: 67px;
+      right: auto;
+      left: -89px;
+      font-size: 28px;
+      line-height: 67px;
+    }
+    
+    &--third::after,
+    &--second::after {
+      top: 0;
+    }
+  }
+  
+  .price__table .price__th {
+    width: 58%;
+  }
+
+  .price__table .price__td {
+    width: 42%;
+  }
+  .price__td {
+    @include font-style(28px, 33px, 300, #444444);
+    width: 30%;
+    padding-top: 14px;
+    padding-bottom: 17px;
+    text-align: right;
+  }
+  
+  .price__link {
+    @include font-style(20px, 22px, 700, #132576);
+    position: relative;
+    display: block;
+    width: 100%;
+    
+    &--close {
+      min-height: 108px;
+    }
+    
+    &--open {
+      padding-left: 79px;
+      padding-right: 180px;
+
+      &::before {
+        @include pseudo-element(67px, 67px);
+        @include bg-image("business.svg", center, center, 17px 21px);
+        left: -9px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #e2e5f2;
+        border-radius: 50%;
+      }
+
+      &::after {
+        @include pseudo-element(99px, 99px);
+        @include bg-image("rates@1x.png", center, center);
+        right: 59px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      
+      &:hover::after,
+      &:focus::after,
+      &:active::after {
+        opacity: 1;
+      }
+    }
+  }
+  
+  .price__modal {
+    @include get-size(526px, 688px);
+    border-radius: 30px;
+    top: 0;
+    left: 50%;
+    padding-top: 52px;
+    clip: rect(0, 768px, 0, 0);
+    transition: clip 0.4s ease 0s;
+    z-index: 3;
+
+    &--show {
+      clip: rect(0, 768px, 1000px, 0);
     }
   }
 }

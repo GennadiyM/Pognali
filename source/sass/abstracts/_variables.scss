@@ -9,10 +9,8 @@ $primary-bg-color: #161c36;
 $second-bg-color: #edeff6;
 $bg-color-button: #ffd74b;
 
-$breakpoints: (
-  "medium": (min-width: 768px),
-  "large": (min-width: 1200px ),
-);
+$breakpoints-medium:"min-width: 768px";
+$breakpoints-large:"min-width: 1440px";
 
 $mobile-max-width: 500px;
 

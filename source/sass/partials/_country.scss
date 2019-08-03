@@ -112,3 +112,89 @@
   @include font-style(16px, 18px, 500, #444444);
   opacity: 0.3;
 }
+
+@media ($breakpoints-medium) {
+  .country {
+    @include get-size(140px, 100%);
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+  }
+
+  .country img {
+    width: 186px;
+    height: 140px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  .country__link {
+    width: 186px;
+    height: 140px;
+    flex-shrink: 0;
+  }
+  
+  .country__info {
+    @include get-size(140px, 100%);
+//    min-width: 435px;
+    margin-top: 0;
+    border-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 27px 39px 51px 31px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &::before {
+      @include pseudo-element(70px, 47px);
+      top: 16px;
+      left: auto;
+      right: 0px;
+      transform: translateY(0) translateX(50%);
+      
+    }
+
+    &--france::before {
+      @include bg-image("france@1x.png", center, center, 70px 47px);
+    }
+
+    &--thailand::before {
+      @include bg-image("thailand@1x.png", center, center, 70px 47px);
+    }
+
+    &--czech::before {
+      @include bg-image("czech@1x.png", center, center, 70px 47px);
+    }
+  }
+
+  .country__title-wrapper {
+    align-items: flex-start;
+  }
+
+  .country__title {
+    @include font-style(24px, 26px, 700, #161c35);
+    @include get-size(24px, 300px);
+    margin-bottom: 2px;
+  }
+
+  .country__visitors {
+    @include font-style(20px, 22px, 500, #444444);
+    min-height: 22px;
+    position: absolute;
+    left: 33px;
+    bottom: 22px;
+    padding-left: 28px;
+    
+    &:before {
+      width: 20px;
+      height: 20px;
+      background-size: 20px 20px;
+    }
+  }
+
+  .country__slogan {
+    @include font-style(20px, 22px, 500, #444444);
+  }
+}

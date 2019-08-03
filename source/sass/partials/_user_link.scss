@@ -36,3 +36,15 @@
     background-color: #81e31e;
   }
 }
+
+@media ($breakpoints-medium) {
+  .user-link__title {
+    @include font-style(24px, 26px, 700, #1d2e5b);
+    padding-left: 21px;
+
+    &::before {
+      @include pseudo-element(7px, 7px);
+      transform: none;
+    }
+  }
+}

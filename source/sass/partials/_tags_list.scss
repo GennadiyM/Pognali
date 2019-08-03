@@ -33,3 +33,13 @@
     opacity: 0.3;
   }
 }
+
+@media ($breakpoints-medium) {
+  .tags-list__link {
+    @include font-style(20px, 24px, 400, black);
+  }
+  .tags-list__item {
+    flex-shrink: 0;
+    margin-right: 5px;
+  }
+}

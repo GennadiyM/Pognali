@@ -3,8 +3,37 @@
   top: 0;
   left: 0;
   min-height: 73px;
+  width: 100%;
+
+  &--nojs {
+    position: static;
+  }
 }
 
 .page-header__main-nav {
   width: 100%;
+}
+
+@media ($breakpoints-medium) {
+  .page-header {
+    min-height: 132px;
+    min-width: 768px;
+  }
+}
+
+@media ($breakpoints-large) {
+  .page-header {
+    position: relative;
+    min-width: 1200px;
+    min-height: auto;
+    padding-top: 48px;
+    background-color: #161c34;
+    z-index: 1;
+  }
+}
+
+@media (min-width: 1440px) {
+  .page-header {
+    min-width: 1440px;
+  }
 }

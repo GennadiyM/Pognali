@@ -2,7 +2,6 @@
   position: relative;
   width: 100%;
   background-color: $primary-bg-color;
-  padding-bottom: 27px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   margin-top: -35px;
@@ -16,6 +15,7 @@
   padding-top: 101px;
   padding-left: 25px;
   padding-right: 25px;
+  padding-bottom: 27px;
   margin: 0 auto;
 }
 
@@ -72,13 +72,20 @@
   border: none;
   border-radius: 10px;
   padding: 13px 60px 14px 23px;
-  transition: all 0.2s;
+  transition: background 0.2s;
   box-shadow: none;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
 
   &::placeholder {
     @include font-style(18px, 18px, 700, #444444);
     transition: opacity 0.2s ease 0s;
     opacity: 0.3;
+  }
+  
+  &:focus {
+    padding: 7px 56px 10px 19px;
   }
 
   &:hover::placeholder,
@@ -114,5 +121,82 @@
 @media (max-width: 350px) {
   .feedback__new-line {
     display: block;
+  }
+}
+
+@media ($breakpoints-medium) {
+  .feedback {
+    min-width: 768px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    margin-top: -65px;
+    background-color: #192144;
+  }
+
+  .feedback__content-container {
+    max-width: none;
+    padding: 135px 75px 61px 75px;
+  }
+
+  .feedback__title {
+    margin-bottom: 57px;
+  }
+
+  .feedback__text {
+    font-size: 28px;
+    line-height: 33px;
+    width: 100%;
+
+    &--top {
+      min-height: auto;
+      margin-bottom: 0;
+    }
+
+    &--bottom {
+      min-height: auto;
+      margin-bottom: 68px;
+    }
+  }
+
+  .feedback__link {
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .feedback__input {
+    height: 81px;
+    border-radius: 20px;
+    padding: 9px 60px 14px 35px;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 700;
+
+    &:focus {
+      padding: 5px 56px 10px 31px;
+    }
+
+    &::placeholder {
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    &:hover::placeholder,
+    &:focus::placeholder {
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+  
+  .feedback__register {
+    margin-bottom: 54px;
+  }
+
+  .feedback br {
+    display: none;
+  }
+
+  .feedback__additional-nav {
+    margin-top: 41px;
+    align-items: flex-start;
   }
 }

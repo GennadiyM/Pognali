@@ -27,3 +27,46 @@
     opacity: 0.3;
   }
 }
+
+@media ($breakpoints-medium) {
+  .site-nav {
+    padding: 0;
+  }
+  .site-nav__item {
+    text-align: left;
+  }
+  .site-nav__link {
+    font-size: 60px;
+    line-height: 71px;
+  }
+}
+
+@media ($breakpoints-large) {
+  .site-nav {
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 142px;
+
+    &::before {
+      @include pseudo-element(62px, 2px);
+      background-color: #ffffff;
+      top: 50%;
+      left: 37px;
+      transform: translateY(-50%);
+    }
+  }
+
+  .site-nav__item {
+    text-align: center;
+    width: auto;
+    max-width: 125px;
+    margin-right: 37px;
+    flex-shrink: 0;
+  }
+
+  .site-nav__link {
+    @include font-style(20px, 30px, 500, #ffffff);
+  }
+
+}
