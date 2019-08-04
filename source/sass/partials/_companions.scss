@@ -3,22 +3,21 @@
   background-color: $primary-bg-color;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
-  padding-top: 30px;
 }
 
 .companions__content-container {
   width: 100%;
   background-image: url("../img/rogovaya-back-mobile@1x.png"), url("../img/smolov-back-desktop@1x.png"), url("../img/blue-back-mobile@1x.png");
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: -9px 344px, 86% 72px, -20px 39px;
+  background-position: -9px 346px, 86% 74px, -20px 74px;
   background-size: auto, auto, auto;
   max-width: $mobile-max-width;
-  padding: 72px 25px 30px;
+  padding: 106px 25px 30px;
   margin: 0 auto;
 }
 
 .companions__title {
-  padding-left: 25px;
+  padding-left: 24px;
   margin-bottom: 18px;
 }
 
@@ -32,7 +31,7 @@
   &--bold {
     @include get-size(44px, 90%);
     font-weight: 700;
-    margin-bottom: 58px;
+    margin-bottom: 55px;
   }
 }
 
@@ -59,19 +58,17 @@
 
 @media ($breakpoints-medium) {
   .companions {
-    background-color: #1d2e5b;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
-    padding-top: 30px;
   }
 
   .companions__content-container {
-    background-image: url("../img/rogovaya-back-mobile@1x.png"), url("../img/smolov-back-desktop@1x.png"), url("../img/blue-back-desktop@1x.png");
+    background-image: url("../img/rogovaya-back-tablet@1x.png"), url("../img/smolov-back-desktop@1x.png"), url("../img/blue-back-mobile@1x.png");
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-position: -9px 344px, 86% 72px, -20px 39px;
     background-size: auto, auto, auto;
     max-width: none;
-    padding: 166px 75px 88px;
+    padding: 200px 74px 88px;
     margin: 0 auto;
   }
 
@@ -80,7 +77,7 @@
     margin-bottom: 55px;
   }
 
-  .companions__info { 
+  .companions__info {
     @include font-style(28px, 33px, 300);
     @include get-size(132px, 75%);
     margin-bottom: 41px;
@@ -89,20 +86,20 @@
     &--bold {
       @include font-style(21px, 25px, 700);
       @include get-size(50px, 50%);
-      margin-bottom: 61px;
+      margin-bottom: 57px;
     }
   }
-  
+
   .companions__list {
     flex-direction: row;
     align-items: flex-start;
     flex-wrap: wrap;
     margin-bottom: 70px;
   }
-  
+
   .companions__list-item {
     margin-right: auto;
-    
+
     &:nth-child(2n) {
       margin-right: 0;
     }

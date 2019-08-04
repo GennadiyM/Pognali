@@ -44,10 +44,10 @@
 .country__info {
   @include get-size(89px, 100%);
   position: relative;
-  margin-top: -10px;
+  margin-top: -12px;
   border-radius: 10px;
   background-color: #ffffff;
-  padding: 25px 25px 10px;
+  padding: 27px 24px 10px;
   z-index: 1;
 
   &::before {
@@ -84,6 +84,7 @@
   display: block;
   flex-shrink: 0;
   overflow: hidden;
+  margin-bottom: 2px;
 }
 
 .country__visitors {
@@ -95,7 +96,7 @@
   flex-shrink: 0;
   overflow: hidden;
   text-align: right;
-  padding-left: 16px;
+  padding-left: 18px;
   opacity: 0.3;
 
   &::before {
@@ -103,7 +104,7 @@
     @include bg-image("user.svg", center, center, 11px 11px);
     top: 50%;
     left: 0;
-    transform: translateY(-50%);
+    transform: translateY(-62%);
   }
 }
 
@@ -134,15 +135,14 @@
     height: 140px;
     flex-shrink: 0;
   }
-  
+
   .country__info {
     @include get-size(140px, 100%);
-//    min-width: 435px;
     margin-top: 0;
     border-radius: 20px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    padding: 27px 39px 51px 31px;
+    padding: 30px 39px 51px 31px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -151,9 +151,8 @@
       @include pseudo-element(70px, 47px);
       top: 16px;
       left: auto;
-      right: 0px;
+      right: 0;
       transform: translateY(0) translateX(50%);
-      
     }
 
     &--france::before {
@@ -186,8 +185,8 @@
     left: 33px;
     bottom: 22px;
     padding-left: 28px;
-    
-    &:before {
+
+    &::before {
       width: 20px;
       height: 20px;
       background-size: 20px 20px;

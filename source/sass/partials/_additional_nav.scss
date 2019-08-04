@@ -202,9 +202,11 @@
   .additional-nav__link-text {
     display: none;
   }
+
   .additional-nav svg {
     display: none;
   }
+
   .additional-nav {
     flex-direction: row;
     flex-wrap: wrap;
@@ -225,8 +227,8 @@
   }
 
   .additional-nav__link {
-    position: relative;
     @include get-size(50px, 50px);
+    position: relative;
 
     &--tel .additional-nav__ico {
       background-color: #ff8d30;

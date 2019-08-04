@@ -32,9 +32,11 @@
   .site-nav {
     padding: 0;
   }
+
   .site-nav__item {
     text-align: left;
   }
+
   .site-nav__link {
     font-size: 60px;
     line-height: 71px;
@@ -68,5 +70,4 @@
   .site-nav__link {
     @include font-style(20px, 30px, 500, #ffffff);
   }
-
 }

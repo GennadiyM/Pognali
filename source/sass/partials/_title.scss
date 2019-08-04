@@ -1,18 +1,19 @@
 .title {
   @include style-reset;
-  @include font-style(24px, 26px, 700, #ff8d30);
+  @include font-style(24px, 25px, 700, #ff8d30);
 
   &--add-profile {
     position: relative;
     padding-right: 50%;
     min-height: 78px;
+    padding-left: 2px;
 
     &::after {
       @include pseudo-element(99px, 99px);
       @include bg-image("rates@1x.png", center, center);
       right: 0;
       top: 50%;
-      transform: translateY(-50%);
+      transform: translateY(-54%);
     }
   }
 
@@ -28,7 +29,7 @@
     &--add-profile {
       padding-right: 16%;
       text-align: right;
-      
+
       &::after {
         display: none;
       }

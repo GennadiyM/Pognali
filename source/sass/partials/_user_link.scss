@@ -44,7 +44,6 @@
 
     &::before {
       @include pseudo-element(7px, 7px);
-      transform: none;
     }
   }
 }

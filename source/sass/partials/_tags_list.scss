@@ -11,6 +11,7 @@
 .tags-list__item {
   flex-shrink: 0;
   margin-right: 3px;
+  height: 18px;
 
   &:last-child {
     margin-right: 0;
@@ -38,8 +39,10 @@
   .tags-list__link {
     @include font-style(20px, 24px, 400, black);
   }
+
   .tags-list__item {
     flex-shrink: 0;
     margin-right: 5px;
+    margin-bottom: 4px;
   }
 }

@@ -53,7 +53,8 @@
 
 .companion__countries {
   position: relative;
-  transform: translateY(-37%);
+  transform: translateY(-32%);
+  margin-bottom: 4px;
 }
 
 .companion__user-link {
@@ -63,7 +64,7 @@
 }
 
 .companion__tags-list {
-  margin-bottom: 15px;
+  margin-bottom: 18px;
   width: 70%;
 
   &--left {
@@ -75,11 +76,11 @@
   .companion {
     @include get-size(483px, 285px);
   }
-  
+
   .companion__img-container {
     height: 285px;
   }
-  
+
   .companion__link {
     height: 285px;
   }
@@ -89,18 +90,18 @@
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
   }
-  
+
   .companion__info {
     @include get-size(198px, 100%);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
   }
-  
+
   .companion__level {
     top: 21px;
     left: 21px;
   }
-  
+
   .companion__user-link {
     margin-top: -8px;
     margin-left: -21px;
@@ -111,13 +112,13 @@
     width: 80%;
     margin-left: 6px;
     margin-bottom: 26px;
-    
+
     &--left {
       margin-left: 0;
     }
   }
-  
+
   .companion__transports {
-    margin-left: 10px;
+    margin-left: 6px;
   }
 }

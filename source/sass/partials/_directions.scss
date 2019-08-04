@@ -7,7 +7,6 @@
   padding-bottom: 30px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
-  padding-top: 31px;
   margin-top: -35px;
   z-index: 4;
 }
@@ -15,13 +14,13 @@
 .directions__content-container {
   width: 100%;
   max-width: $mobile-max-width;
-  padding-top: 72px;
+  padding-top: 106px;
   margin: 0 auto;
 }
 
 .directions__title {
-  padding-left: 24px;
-  margin-bottom: 20px;
+  padding-left: 25px;
+  margin-bottom: 18px;
 }
 
 .directions__info {
@@ -38,7 +37,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 
   &::after {
     @include pseudo-element(100%, 81px);
@@ -85,7 +84,7 @@
     @include get-size(165px, 56%);
     @include font-style(28px, 33px, 300, #444444);
     padding-left: 0;
-    margin-bottom: 107px;
+    margin-bottom: 102px;
   }
 
   .descriptions__country {

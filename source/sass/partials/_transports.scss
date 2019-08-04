@@ -36,6 +36,7 @@
   &--bus {
     @include bg-image("bus.svg", center, center, auto);
     width: 17px;
+    transform: translateX(2px);
   }
 
   &--bicycle {

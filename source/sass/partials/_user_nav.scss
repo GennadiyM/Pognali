@@ -25,7 +25,7 @@
   overflow: hidden;
   transition: background 0.2s ease 0s, color 0.2s ease 0s;
   text-transform: uppercase;
-  padding-top: 9px;
+  padding-top: 10px;
 
   &:hover,
   &:focus {
@@ -42,11 +42,12 @@
 .user-nav--about-us a {
   min-height: 40px;
   border-radius: 20px;
-  padding-top: 4px;
+  padding-top: 7px;
 }
 
 @media ($breakpoints-medium) {
-  .user-nav__item a{
+  .user-nav__item a {
     font-size: 20px;
+    padding-top: 12px;
   }
 }
