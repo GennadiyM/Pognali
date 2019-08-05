@@ -5,13 +5,12 @@
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   margin-top: -35px;
-  padding-top: 30px;
 }
 
 .price__content-container {
   width: 100%;
   max-width: $mobile-max-width;
-  padding: 57px 25px 35px 48px;
+  padding: 87px 25px 35px 48px;
   margin: 0 auto;
 }
 
@@ -161,7 +160,6 @@
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
     margin-top: -60px;
-    padding-top: 60px;
   }
 
   .price__title {
@@ -174,7 +172,7 @@
   
   .price__content-container {
     max-width: none;
-    padding: 73px 25px 86px 50px;
+    padding: 133px 25px 86px 50px;
     margin: 0 auto;
   }
 
@@ -295,6 +293,49 @@
 
     &--show {
       clip: rect(0, 768px, 1000px, 0);
+    }
+  }
+}
+
+@media ($breakpoints-large) {
+  .price {
+    min-width: 1440px;
+    margin-top: -60px;
+  }
+  
+  .price__content-container {
+    width: 1440px;
+    padding: 162px 130px 187px 130px;
+  }
+
+  .price__title {
+    margin-bottom: 106px;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+  
+  .price__link {
+    &::after {
+      display: none;
+    }
+  }
+
+  .price__table {
+    position: relative;
+    width: 850px;
+    &--modal {
+      &::after {
+        display: none;
+      }
+    }
+
+    &::after {
+      @include pseudo-element(198px, 198px);
+      @include bg-image("rates@1x.png", center, center);
+      right: -246px;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 }

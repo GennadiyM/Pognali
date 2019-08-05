@@ -278,4 +278,59 @@
       background-color: #f26926;
     }
   }
+
+  .additional-nav--feedback {
+    width: 835px;
+    margin: 0 auto;
+  }
+  
+  .additional-nav--feedback .additional-nav__link-text {
+    display: block;
+  }
+  
+  .additional-nav--feedback .additional-nav__item {
+    @include get-size(68px, 400px);
+  }
+
+  .additional-nav--feedback .additional-nav__link {
+    @include get-size(68px, 100%);
+    font-size: 28px;
+
+    &::before {
+      display: none;
+    }
+    
+    &--email:hover .additional-nav__ico,
+    &--email:focus .additional-nav__ico {
+      background-color: #121936;
+    }
+
+    &--tel:hover .additional-nav__ico,
+    &--tel:focus .additional-nav__ico {
+      background-color: #121936;
+    }
+  }
+
+  .additional-nav--feedback .additional-nav__link--tel svg {
+    display: block;
+    width: 28px;
+    height: 28px;
+  }
+
+  .additional-nav--feedback .additional-nav__ico {
+    width: 68px;
+    height: 68px;
+    margin-right: 23px;
+    background-color: #121936;
+  }
+
+  .additional-nav--feedback .additional-nav__link--email svg {
+    display: block;
+    width: 27px;
+    height: 20px;
+  }
+
+  .additional-nav--feedback .additional-nav__link-text {
+    padding-top: 25px;
+  }
 }

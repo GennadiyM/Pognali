@@ -197,3 +197,20 @@
     align-items: flex-start;
   }
 }
+
+@media ($breakpoints-large) {
+  .feedback {
+    min-width: 1440px;
+  }
+
+  .feedback__content-container {
+    width: 1440px;
+    padding-top: 166px;
+    padding-left: 132px;
+    padding-right: 132px;
+  }
+  
+  .feedback__input {
+    padding-right: 326px;
+  }
+}

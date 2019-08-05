@@ -80,6 +80,7 @@
     padding-top: 134px;
     padding-left: 75px;
     padding-right: 75px;
+    padding-bottom: 10px;
     max-width: none;
   }
 
@@ -100,5 +101,45 @@
   .map__map-container {
     height: 534px;
     margin-top: -74px;
+  }
+}
+
+@media ($breakpoints-large) {
+  .map {
+    min-width: 1440px;
+  }
+
+  .map__adress-container {
+    min-height: 265px;
+  }
+
+  .map__content-container {
+    width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 134px;
+    padding-left: 284px;
+    padding-right: 134px;
+  }
+
+  .map__adress {
+    width: 550px;
+    margin-bottom: 0;
+
+    &::before {
+      width: 68px;
+      height: 68px;
+      background-size: 21px 32px;
+      transform: translateY(-54%);
+    }
+  }
+
+  .map__map-container {
+    height: 534px;
+    margin-top: -74px;
+  }
+  
+  .map__button {
+    width: 325px;
   }
 }

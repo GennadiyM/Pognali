@@ -1,4 +1,5 @@
 .companions {
+  position: relative;
   width: 100%;
   background-color: $primary-bg-color;
   border-bottom-left-radius: 30px;
@@ -12,7 +13,7 @@
   background-position: -9px 346px, 86% 74px, -20px 74px;
   background-size: auto, auto, auto;
   max-width: $mobile-max-width;
-  padding: 106px 25px 30px;
+  padding: 106px 25px 94px;
   margin: 0 auto;
 }
 
@@ -49,7 +50,11 @@
 }
 
 .companions__button {
-  width: 100%;
+  position: absolute;
+  width: 85%;
+  bottom: 31px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .companions br {
@@ -106,7 +111,59 @@
   }
 }
 
+@media ($breakpoints-large) {
+  .companions {
+    min-width: 1440px;
+  }
+
+  .companions__content-container {
+    width: 1440px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 183px  40px 62px 40px;
+  }
+  
+  .companions__info-container {
+    width: 630px;
+    padding-left: 88px;
+  }
+  
+  .companions__list {
+    width: 630px;
+  }
+  
+  .companions__title {
+    width: 430px;
+  }
+  
+  .companions__info {
+    width: 430px;
+    
+    &--bold {
+      width: 278px;
+      margin-bottom: 85px;
+    }
+  }
+
+  .companions__button {
+    width: 280px;
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+  }
+}
+
+
 @media (min-width: 768px) and (max-width: 769px) {
+  .companions br {
+    display: block;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1441px) {
   .companions br {
     display: block;
   }
