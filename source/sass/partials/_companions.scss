@@ -1,18 +1,5 @@
 .companions {
-  width: 100%;
-  background-color: $second-bg-color;
-}
-
-.companions__background-container {
-  width: 100%;
-  background-image: url('../img/rogovaya-back-mobile@1x.png'), url('../img/smolov-back-desktop@1x.png'), url('../img/blue-back-desktop@1x.png');
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: 0 311px, 90% 39px, -20px 39px;
-  background-size: auto, auto, auto;
-  margin: 0 auto;
-}
-
-.companions__wrapper {
+  position: relative;
   width: 100%;
   background-color: $primary-bg-color;
   border-bottom-left-radius: 30px;
@@ -21,27 +8,31 @@
 
 .companions__content-container {
   width: 100%;
+  background-image: url("../img/rogovaya-back-mobile@1x.png"), url("../img/smolov-back-desktop@1x.png"), url("../img/blue-back-mobile@1x.png");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: -9px 346px, 86% 74px, -20px 74px;
+  background-size: auto, auto, auto;
   max-width: $mobile-max-width;
-  padding: 72px 25px 30px;
+  padding: 106px 25px 94px;
   margin: 0 auto;
 }
 
 .companions__title {
-  margin-bottom: 25px;
-  padding-left: 25px;
+  padding-left: 24px;
+  margin-bottom: 18px;
 }
 
 .companions__info {
   @include style-reset;
   @include font-style(16px, 22px, 300);
   @include get-size(110px, 90%);
-  margin-bottom: 25px;
+  margin-bottom: 22px;
   padding-left: 25px;
-  
+
   &--bold {
-    @include get-size(44px, 90%)
+    @include get-size(44px, 90%);
     font-weight: 700;
-    margin-bottom: 60px;
+    margin-bottom: 55px;
   }
 }
 
@@ -51,8 +42,129 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .companions__list-item {
   margin-bottom: 10px;
+}
+
+.companions__button {
+  position: absolute;
+  width: 85%;
+  bottom: 31px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.companions br {
+  display: none;
+}
+
+@media ($breakpoints-medium) {
+  .companions {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  .companions__content-container {
+    background-image: url("../img/rogovaya-back-tablet@1x.png"), url("../img/smolov-back-desktop@1x.png"), url("../img/blue-back-mobile@1x.png");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: -9px 344px, 86% 72px, -20px 39px;
+    background-size: auto, auto, auto;
+    max-width: none;
+    padding: 200px 74px 88px;
+    margin: 0 auto;
+  }
+
+  .companions__title {
+    padding-left: 0;
+    margin-bottom: 55px;
+  }
+
+  .companions__info {
+    @include font-style(28px, 33px, 300);
+    @include get-size(132px, 75%);
+    margin-bottom: 41px;
+    padding-left: 0;
+
+    &--bold {
+      @include font-style(21px, 25px, 700);
+      @include get-size(50px, 50%);
+      margin-bottom: 57px;
+    }
+  }
+
+  .companions__list {
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+  }
+
+  .companions__list-item {
+    margin-right: auto;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+}
+
+@media ($breakpoints-large) {
+  .companions {
+    min-width: 1440px;
+  }
+
+  .companions__content-container {
+    width: 1440px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 183px  40px 62px 40px;
+  }
+  
+  .companions__info-container {
+    width: 630px;
+    padding-left: 88px;
+  }
+  
+  .companions__list {
+    width: 630px;
+  }
+  
+  .companions__title {
+    width: 430px;
+  }
+  
+  .companions__info {
+    width: 430px;
+    
+    &--bold {
+      width: 278px;
+      margin-bottom: 85px;
+    }
+  }
+
+  .companions__button {
+    width: 280px;
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 769px) {
+  .companions br {
+    display: block;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1441px) {
+  .companions br {
+    display: block;
+  }
 }

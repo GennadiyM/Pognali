@@ -20,7 +20,7 @@
 
   &:last-child {
     margin-right: 0;
-  } 
+  }
 }
 
 .transports__type {
@@ -29,22 +29,24 @@
   font-size: 0;
 
   &--plain {
+    @include bg-image("plane.svg", center, center, auto);
     width: 19px;
-    @include bg-image('plane.svg', center, center, auto);
   }
 
   &--bus {
+    @include bg-image("bus.svg", center, center, auto);
     width: 17px;
-    @include bg-image('bus.svg', center, center, auto);
+    transform: translateX(2px);
   }
 
   &--bicycle {
+    @include bg-image("bike.svg", center, center, auto);
     width: 24px;
-    @include bg-image('bike.svg', center, center, auto);
   }
 
   &--walk {
+    @include bg-image("run.svg", center, center, auto);
     width: 20px;
-    @include bg-image('run.svg', center, center, auto);
+    transform: translateX(-4px);
   }
 }

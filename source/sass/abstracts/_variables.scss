@@ -1,22 +1,20 @@
-$font-stack: 'blogger', 'Arial', sans-serif;
+$font-stack: "blogger", "Arial", sans-serif;
 $primary-font-size: 16px;
 $primary-font-weight: 300;
 $primary-font-line-hieght: 22px;
 $primary-font-color: #ffffff;
 $second-font-color: #192144;
 
-$primary-bg-color: #161c36;
+$primary-bg-color: #192144;
 $second-bg-color: #edeff6;
 $bg-color-button: #ffd74b;
 
-$breakpoints: (
-  'medium': (min-width: 768px),
-  'large': (min-width: 1200px ),
-);
+$breakpoints-medium:"min-width: 768px";
+$breakpoints-large:"min-width: 1440px";
 
 $mobile-max-width: 500px;
 
 $retina: (
-  'dpi': 144dpi,
-  'dppx': 1.5dppx,
+  "dpi": 144dpi,
+  "dppx": 1.5dppx,
 );

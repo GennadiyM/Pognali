@@ -1,22 +1,20 @@
 .additional-nav {
   @include default-list;
   position: relative;
-  width: 270px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   z-index: 0;
 }
 
 .additional-nav__item {
-  @include get-size(45px, 100%);
+  @include get-size(45px, 270px);
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .additional-nav__ico {
-  display: block;
   width: 45px;
   height: 45px;
   display: flex;
@@ -49,29 +47,20 @@
   align-items: flex-start;
   text-transform: uppercase;
 
-  &--auth {
-    @include get-size(50px, 270px);
-    justify-content: center;
-    text-align: center;
-    border-radius: 25px;
-    background-color: $bg-color-button;
-    overflow: hidden;
-    margin-bottom: 47px;
-    transition: background 0.2s;
-  }
-
   &--email,
   &--tel {
     font-size: 16px;
     line-height: 22px;
   }
-}
 
-.additional-nav__link {  
   &:hover,
   &:focus {
-    color: #ffbd30;
     outline: none;
+  }
+
+  &:hover .additional-nav__link-text,
+  &:focus .additional-nav__link-text {
+    opacity: 0.7;
   }
 
   &:hover svg,
@@ -83,63 +72,41 @@
   &:active .additional-nav__link-text {
     opacity: 0.3;
   }
+}
 
-  &--auth:hover,
-  &--auth:focus {
-    background-color: #ffbd30;
-    color: $second-font-color;
-  }
+.additional-nav__link--tel svg {
+  width: 18px;
+  height: 18px;
+}
+
+.additional-nav__link--email svg {
+  width: 18px;
+  height: 13px;
 }
 
 .additional-nav--about-us {
   flex-direction: row;
   flex-wrap: wrap;
-  width: 100%;
+  flex-shrink: 0;
+  width: 80px;
 }
 
 .additional-nav--about-us .additional-nav__item {
-  @include get-size(40px, 100%);
-}
-
-.additional-nav--about-us .additional-nav__item--tel,
-.additional-nav--about-us .additional-nav__item--email {
   @include get-size(40px, 40px);
-}
-
-.additional-nav--about-us .additional-nav__item--auth {
-  @include get-size(40px);
-  flex-grow: 1;
+  margin: 0;
 }
 
 .additional-nav--about-us .additional-nav__ico {
   width: 40px;
   height: 40px;
   background-color: $bg-color-button;
-  margin-right: 0;
-}
-
-.additional-nav--about-us svg {
-  width: 18px;
-  height: 18px;
-}
-
-.additional-nav--about-us .additional-nav__link-text {
-  @include get-size(30px);
-  display: block;
-  padding-top: 3px;
+  margin: 0;
 }
 
 .additional-nav--about-us .additional-nav__link {
   @include get-size(40px, 100%);
 
-  &--auth {
-    @include get-size(40px, 100%);
-    border-radius: 20px;
-    margin-bottom: 0;
-    flex-shrink: 0;
-  }
-
-  &--tel .additional-nav__ico {  
+  &--tel .additional-nav__ico {
     background-color: #ff8d30;
   }
 
@@ -148,9 +115,7 @@
     font-size: 0;
     line-height: 0;
   }
-}
 
-.additional-nav--about-us .additional-nav__link {
   &:hover,
   &:focus {
     outline: none;
@@ -168,7 +133,7 @@
   }
 
   &--tel:hover .additional-nav__ico,
-  &--tel:focus .additional-nav__ico{
+  &--tel:focus .additional-nav__ico {
     background-color: #f26926;
   }
 
@@ -177,8 +142,195 @@
     fill: #161c35;
   }
 
+  &:active svg {
+    opacity: 0.3;
+  }
+}
+
+.additional-nav--feedback .additional-nav__link {
+  color: #ffd64b;
+
+  &:hover .additional-nav__link-text,
+  &:focus .additional-nav__link-text {
+    opacity: 1;
+    color: #ffbd30;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: #ffbd30;
+  }
+
   &:active svg,
   &:active .additional-nav__link-text {
     opacity: 0.3;
+  }
+}
+
+@media ($breakpoints-medium) {
+  .additional-nav__item {
+    @include get-size(68px, 400px);
+  }
+
+  .additional-nav__link {
+    @include get-size(68px, 100%);
+    font-size: 28px;
+  }
+
+  .additional-nav__link--tel svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .additional-nav__ico {
+    width: 68px;
+    height: 68px;
+    margin-right: 23px;
+  }
+
+  .additional-nav__link--email svg {
+    width: 27px;
+    height: 20px;
+  }
+
+  .additional-nav__link-text {
+    padding-top: 25px;
+  }
+}
+
+@media ($breakpoints-large) {
+  .additional-nav__link-text {
+    display: none;
+  }
+
+  .additional-nav svg {
+    display: none;
+  }
+
+  .additional-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    width: 100px;
+  }
+
+  .additional-nav__item {
+    @include get-size(50px, 50px);
+    margin: 0;
+  }
+
+  .additional-nav__ico {
+    width: 50px;
+    height: 50px;
+    background-color: $bg-color-button;
+    margin: 0;
+  }
+
+  .additional-nav__link {
+    @include get-size(50px, 50px);
+    position: relative;
+
+    &--tel .additional-nav__ico {
+      background-color: #ff8d30;
+    }
+
+    &--tel::before {
+      @include pseudo-element(50px, 50px);
+      @include bg-image("topmenu-phone.svg", center, center, 18px 18px);
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    &--email::before {
+      @include pseudo-element(50px, 50px);
+      @include bg-image("topmenu-mail.svg", center, center, 18px 14px);
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    &--tel,
+    &--email {
+      font-size: 0;
+      line-height: 0;
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+    }
+
+    &--auth:hover,
+    &--auth:focus {
+      background-color: #ffbd30;
+    }
+
+    &--email:hover .additional-nav__ico,
+    &--email:focus .additional-nav__ico {
+      background-color: #ff8d30;
+    }
+
+    &--tel:hover .additional-nav__ico,
+    &--tel:focus .additional-nav__ico {
+      background-color: #f26926;
+    }
+  }
+
+  .additional-nav--feedback {
+    width: 835px;
+    margin: 0 auto;
+  }
+  
+  .additional-nav--feedback .additional-nav__link-text {
+    display: block;
+  }
+  
+  .additional-nav--feedback .additional-nav__item {
+    @include get-size(68px, 400px);
+  }
+
+  .additional-nav--feedback .additional-nav__link {
+    @include get-size(68px, 100%);
+    font-size: 28px;
+
+    &::before {
+      display: none;
+    }
+    
+    &--email:hover .additional-nav__ico,
+    &--email:focus .additional-nav__ico {
+      background-color: #121936;
+    }
+
+    &--tel:hover .additional-nav__ico,
+    &--tel:focus .additional-nav__ico {
+      background-color: #121936;
+    }
+  }
+
+  .additional-nav--feedback .additional-nav__link--tel svg {
+    display: block;
+    width: 28px;
+    height: 28px;
+  }
+
+  .additional-nav--feedback .additional-nav__ico {
+    width: 68px;
+    height: 68px;
+    margin-right: 23px;
+    background-color: #121936;
+  }
+
+  .additional-nav--feedback .additional-nav__link--email svg {
+    display: block;
+    width: 27px;
+    height: 20px;
+  }
+
+  .additional-nav--feedback .additional-nav__link-text {
+    padding-top: 25px;
   }
 }

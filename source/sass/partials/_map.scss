@@ -1,0 +1,145 @@
+.map {
+  width: 100%;
+  position: relative;
+  z-index: 0;
+  margin-top: -35px;
+}
+
+.map__adress-container {
+  position: relative;
+  background-color: #ffd74b;
+  width: 100%;
+  min-height: 242px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  z-index: 1;
+}
+
+.map__content-container {
+  width: 100%;
+  height: 100%;
+  padding-top: 67px;
+  padding-left: 25px;
+  padding-right: 25px;
+  max-width: $mobile-max-width;
+  margin: 0 auto;
+}
+
+.map__adress {
+  @include style-reset;
+  @include font-style(16px, 22px, 700, #192144);
+  position: relative;
+  text-transform: uppercase;
+  padding-left: 62px;
+  margin-bottom: 32px;
+
+  &::before {
+    @include pseudo-element(45px, 45px);
+    @include bg-image("contacts-location.svg", center, center, 14px 22px);
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-color: #192144;
+  }
+}
+
+.map__map-container {
+  @include bg-image("map_mobile@1x.jpg", top, center, auto);
+  position: relative;
+  height: 591px;
+  margin-top: -164px;
+  z-index: 0;
+}
+
+.map__button {
+  width: 100%;
+}
+
+.map iframe {
+  width: 100%;
+}
+
+@media ($breakpoints-medium) {
+  .map br {
+    display: none;
+  }
+
+  .map {
+    min-width: 768px;
+    margin-top: -65px;
+  }
+
+  .map__adress-container {
+    min-height: 390px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  .map__content-container {
+    padding-top: 134px;
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-bottom: 10px;
+    max-width: none;
+  }
+
+  .map__adress {
+    font-size: 28px;
+    line-height: 30px;
+    padding-left: 95px;
+    margin-bottom: 60px;
+
+    &::before {
+      width: 68px;
+      height: 68px;
+      background-size: 21px 32px;
+      transform: translateY(-54%);
+    }
+  }
+
+  .map__map-container {
+    height: 534px;
+    margin-top: -74px;
+  }
+}
+
+@media ($breakpoints-large) {
+  .map {
+    min-width: 1440px;
+  }
+
+  .map__adress-container {
+    min-height: 265px;
+  }
+
+  .map__content-container {
+    width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 134px;
+    padding-left: 284px;
+    padding-right: 134px;
+  }
+
+  .map__adress {
+    width: 550px;
+    margin-bottom: 0;
+
+    &::before {
+      width: 68px;
+      height: 68px;
+      background-size: 21px 32px;
+      transform: translateY(-54%);
+    }
+  }
+
+  .map__map-container {
+    height: 534px;
+    margin-top: -74px;
+  }
+  
+  .map__button {
+    width: 325px;
+  }
+}

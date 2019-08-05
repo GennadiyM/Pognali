@@ -1,10 +1,28 @@
 .logo {
   @include style-reset;
+  @include bg-image("logo-mobile-blue@1x.png", center, center);
   display: block;
   width: 100px;
   height: 19px;
+  font-size: 0;
 }
 
-.logo__img {
-  display: none;
+@media ($breakpoints-medium) {
+  .logo {
+    width: 164px;
+    height: 42px;
+    background-image: url("../img/logo-tablet-blue@1x.png");
+  }
+}
+
+@media ($breakpoints-large) {
+  .logo {
+    width: 200px;
+    height: 52px;
+    background-image: url("../img/logo-desktop-white@1x.png");
+    
+    &--footer {
+      background-image: url("../img/logo-desktop-blue@1x.png");
+    }
+  }
 }

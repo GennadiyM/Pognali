@@ -1,28 +1,26 @@
 .directions {
+  position: relative;
   width: 100%;
-  background-color: $primary-bg-color;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: $second-bg-color;
+  padding-bottom: 93px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin-top: -35px;
+  z-index: 4;
 }
 
 .directions__content-container {
   width: 100%;
   max-width: $mobile-max-width;
-  padding-top: 72px;
+  padding-top: 106px;
   margin: 0 auto;
 }
 
-.directions__wrapper {
-  width: 100%;
-  padding-left: 25px;
-  padding-right: 25px;
-  background-color: $second-bg-color;
-  padding-bottom: 30px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-}
-
 .directions__title {
-  padding-left: 24px;
-  margin-bottom: 20px;
+  padding-left: 25px;
+  margin-bottom: 18px;
 }
 
 .directions__info {
@@ -30,33 +28,123 @@
   @include get-size(113px, 81%);
   @include font-style(16px, 22px, 300, #444444);
   padding-left: 24px;
-  margin-bottom: 65px;
+  margin-bottom: 58px;
 }
 
-.descriptions__countries-list {
+.directions__countries-list {
   @include default-list;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 25px;
-  
+  margin-bottom: 14px;
+
   &::after {
     @include pseudo-element(100%, 81px);
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: url('../img/fade.png');
+    background-image: url("../img/fade.png");
     background-repeat: repeat-x;
     z-index: 2;
   }
 }
- 
-.descriptions__country {
+
+.directions__country {
   @include get-size(189px, 100%);
   margin-bottom: 10px;
 }
 
-.descriptions__button {
-  width: 100%;
+.directions__button {    
+  width: 85%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
+}
+
+@media ($breakpoints-medium) {
+  .directions {
+    min-width: 768px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  .directions__content-container {
+    max-width: none;
+    padding-left: 74px;
+    padding-right: 75px;
+    padding-bottom: 81px;
+  }
+
+  .directions__title {
+    padding-left: 0;
+    margin-bottom: 58px;
+  }
+
+  .directions__info {
+    @include get-size(165px, 56%);
+    @include font-style(28px, 33px, 300, #444444);
+    padding-left: 0;
+    margin-bottom: 102px;
+  }
+
+  .directions__country {
+    @include get-size(140px, 100%);
+    margin-bottom: 10px;
+  }
+
+  .directions__countries-list {
+    margin-bottom: 36px;
+  }
+}
+
+@media ($breakpoints-large) {
+  .directions {
+    min-width: 1440px;
+  }
+
+  .directions__content-container {
+    width: 1440px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 195px 40px 12px 40px;
+  }
+  
+  .directions__info-container {
+    width: 630px;
+    padding-left: 112px;
+    order: 1;
+  }
+  
+  .directions__countries-list {
+    width: 630px;
+    padding-left: 70px;
+    order: 0;
+  }
+  
+  .directions__info {
+    width: 342px;
+  }
+  
+  .directions__button {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    width: 274px;
+    order: 2;
+  }
+
+  .directions__title {
+    margin-bottom: 58px;
+  }
+}
+
+@media (min-width: 321px) {
+  .directions br {
+    display: none;
+  }
 }

@@ -1,0 +1,42 @@
+.copyright {
+  @include style-reset;
+  @include font-style(16px, 22px, 400, #444444);
+  min-height: 34px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: opacity 0.2s;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding-top: 14px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyright span {
+  padding-top: 4px;
+  width: 150px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+@media ($breakpoints-medium) {
+  .copyright {
+    font-size: 20px;
+    line-height: 24px;
+    border: none;
+    padding-top: 0;
+  }
+
+  .copyright span {
+    padding-top: 4px;
+    width: 120px;
+  }
+}

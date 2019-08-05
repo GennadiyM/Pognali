@@ -3,19 +3,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   width: 60px;
   height: 60px;
   background-color: #0b151a;
   border-radius: 50%;
 }
-  
+
 .level--80 .level__pie {
-    @include level(80);
+  @include level-max(80);
 }
 
 .level--99 .level__pie {
-    @include level(99);
+  @include level-max(99);
 }
 
 .level__pie {
@@ -27,7 +26,7 @@
   clip: rect(0, 60px, 60px, 30px);
 }
 
-.level__half-circle { 
+.level__half-circle {
   position: absolute;
   left: 0;
   top: 0;
@@ -46,7 +45,7 @@
   width: 38px;
   overflow: hidden;
   text-align: center;
-  margin-bottom: 3px;
+  margin-top: 13px;
 }
 
 .level__text {
@@ -54,7 +53,7 @@
   @include font-style(14px, 14px, 400);
   width: 31px;
   height: 17px;
-  padding-top: 3px;
+  padding-top: 2px;
   display: block;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   text-align: center;

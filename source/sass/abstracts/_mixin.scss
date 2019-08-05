@@ -28,7 +28,7 @@ input[type="radio"].visually-hidden {
 }
 
 @mixin bg-image($url, $x, $y, $size: contain) {
-  background-image: url('../img/' + $url);
+  background-image: url("../img/" + $url);
   background-repeat: no-repeat;
   background-position: $x $y;
   background-size: $size;
@@ -41,7 +41,7 @@ input[type="radio"].visually-hidden {
   color: $color;
 }
 
-@mixin pseudo-element($width, $height, $content: '') {
+@mixin pseudo-element($width, $height, $content: "") {
   position: absolute;
   display: block;
   width: $width;
@@ -49,19 +49,24 @@ input[type="radio"].visually-hidden {
   content: $content;
 }
 
-@mixin level($level) {
+@mixin level-max($level) {
+  clip: rect(auto, auto, auto, auto);
+
   .level__half-circle--left-side {
     transform: rotate($level * 3.6deg);
   }
 
-  @if $level <= 50 {
-    .level__half-circle--right-side {
-      display: none;
-    }
-  } @else {
-    clip: rect(auto, auto, auto, auto);
-    .level__half-circle--right-side {
-      transform: rotate(180deg);
-    }
+  .level__half-circle--right-side {
+    transform: rotate(180deg);
+  }
+}
+
+@mixin level-less($level) {
+  .level__half-circle--left-side {
+    transform: rotate($level * 3.6deg);
+  }
+
+  .level__half-circle--right-side {
+    display: none;
   }
 }

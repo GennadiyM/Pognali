@@ -1,8 +1,19 @@
 .user-link {
   @include style-reset;
+  display: block;
   max-width: 240px;
   min-height: 23px;
-  display: block;
+  transition: opacity 0.2s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .user-link__title {
@@ -12,7 +23,7 @@
   position: relative;
   padding-left: 17px;
 
-  &::before{
+  &::before {
     @include pseudo-element(5px, 5px);
     left: 0;
     top: 50%;
@@ -23,5 +34,16 @@
 
   &--online::before {
     background-color: #81e31e;
+  }
+}
+
+@media ($breakpoints-medium) {
+  .user-link__title {
+    @include font-style(24px, 26px, 700, #1d2e5b);
+    padding-left: 21px;
+
+    &::before {
+      @include pseudo-element(7px, 7px);
+    }
   }
 }
