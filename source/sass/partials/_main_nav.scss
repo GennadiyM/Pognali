@@ -6,6 +6,7 @@
   flex-wrap: wrap;
   padding: 27px 25px 29px;
   transition: all 0.4s ease 0s, padding 0s ease 0s, background 0s ease 0s;
+  width: 100%;
 }
 
 .main-nav__logo {
@@ -110,7 +111,6 @@
 
   .main-nav--opened .main-nav__site-nav {
     opacity: 1;
-    padding-left: 57px;
   }
 
   .main-nav--closed .main-nav__user-nav {
@@ -127,7 +127,6 @@
 
   .main-nav--opened .main-nav__additional-nav {
     opacity: 1;
-    padding-left: 57px;
   }
 
   .main-nav--closed .main-nav__social-list {
@@ -136,7 +135,6 @@
 
   .main-nav--opened .main-nav__social-list {
     opacity: 1;
-    padding-left: 60px;
   }
 
   .main-nav--opened .main-nav__toggle {
@@ -325,6 +323,7 @@
   .main-nav__site-nav {
     width: 580px;
     min-height: auto;
+    padding-top: 4px;
     margin: 0;
     margin-right: auto;
     order: 1;

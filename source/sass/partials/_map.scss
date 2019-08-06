@@ -110,26 +110,29 @@
   }
 
   .map__adress-container {
-    min-height: 265px;
+    min-height: auto;
   }
 
   .map__content-container {
     width: 1440px;
     display: flex;
     justify-content: space-between;
-    padding-top: 134px;
-    padding-left: 284px;
+    padding-top: 125px;
     padding-right: 134px;
+    padding-bottom: 59px;
+    padding-left: 284px;
   }
 
   .map__adress {
     width: 550px;
     margin-bottom: 0;
+    padding-left: 120px;
+    padding-top: 24px;
 
     &::before {
-      width: 68px;
-      height: 68px;
-      background-size: 21px 32px;
+      width: 90px;
+      height: 90px;
+      background-size: 31px 48px;
       transform: translateY(-54%);
     }
   }
@@ -138,7 +141,7 @@
     height: 534px;
     margin-top: -74px;
   }
-  
+
   .map__button {
     width: 325px;
   }
