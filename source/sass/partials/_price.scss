@@ -169,7 +169,7 @@
   .price__modal .price__title {
     margin-bottom: 43px;
   }
-  
+
   .price__content-container {
     max-width: none;
     padding: 133px 25px 86px 50px;
@@ -193,9 +193,9 @@
 
   .price__th {
     @include font-style(28px, 33px, 300, #444444);
-    width: 66%;
     padding-top: 17px;
     padding-bottom: 15px;
+    width: 58%;
 
     &::after {
       width: 67px;
@@ -226,10 +226,6 @@
     font-size: 24px;
     line-height: 26px;
     text-transform: none;
-  }
-
-  .price__th {
-    width: 58%;
   }
 
   .price__td {
@@ -302,20 +298,28 @@
     min-width: 1440px;
     margin-top: -60px;
   }
-  
+
   .price__content-container {
     width: 1440px;
-    padding: 162px 130px 187px 130px;
+    padding: 165px 130px 188px;
+  }
+
+  .price__modal {
+    top: 70px;
   }
 
   .price__title {
-    margin-bottom: 106px;
+    margin-bottom: 101px;
     width: 100%;
     text-align: center;
     padding: 0;
   }
-  
+
   .price__link {
+    &--open {
+      margin-left: 11px;
+    }
+
     &::after {
       display: none;
     }
@@ -323,12 +327,8 @@
 
   .price__table {
     position: relative;
-    width: 850px;
-    &--modal {
-      &::after {
-        display: none;
-      }
-    }
+    width: 842px;
+    margin-left: 89px;
 
     &::after {
       @include pseudo-element(198px, 198px);
@@ -336,6 +336,16 @@
       right: -246px;
       top: 50%;
       transform: translateY(-50%);
+    }
+
+    &--modal {
+      width: 75%;
+      margin-left: auto;
+      margin-right: auto;
+
+      &::after {
+        display: none;
+      }
     }
   }
 }

@@ -236,6 +236,7 @@
   .about-us {
     min-width: 1440px;
     position: relative;
+
     &::before {
       @include pseudo-element(100%, 650px);
       background-image: url("../img/globe-back-desktop@1x.jpg");
@@ -250,10 +251,10 @@
   .about-us__content-container {
     background-image: url("../img/about-desktop@1x.png"), url("../img/traveller-illustration-desktop@1x.png");
     background-repeat: no-repeat, no-repeat;
-    background-position: bottom 0 right 60px, top center;
+    background-position: bottom 0 right 60px, top 10px left 60%;
     background-size: auto auto;
     max-width: 1440px;
-    padding-top: 103px;
+    padding-top: 109px;
     padding-left: 60px;
     padding-right: 60px;
     display: flex;
@@ -289,7 +290,7 @@
 
   .about-us__blockquote-text {
     width: 100%;
-    margin-bottom: 46px;
+    margin-bottom: 43px;
   }
 
   .about-us__blockquote-author-info {
@@ -299,7 +300,7 @@
   .about-us__steps {
     min-height: 107px;
     margin: 0;
-    margin-top: 107px;
+    margin-top: 101px;
     margin-bottom: 251px;
   }
 
@@ -311,15 +312,16 @@
   }
 
   .about-us__title {
-    margin-bottom: 55px;
+    margin-bottom: 58px;
   }
 
   .about-us__text {
     width: 50%;
-    margin-bottom: 41px;
+    margin-bottom: 40px;
 
     &--bold {
       width: 35%;
+      margin-bottom: 39px;
     }
   }
 

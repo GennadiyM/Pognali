@@ -197,3 +197,13 @@
     @include font-style(20px, 22px, 500, #444444);
   }
 }
+
+@media ($breakpoints-large) {
+  .country__info {
+    padding-top: 25px;
+
+    &::before {
+      top: 23px;
+    }
+  }
+}

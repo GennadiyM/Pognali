@@ -24,6 +24,7 @@
   background-color: #121936;
   margin-right: 17px;
   transition: background 0.2s;
+  transform: translateY(-3px);
 }
 
 .additional-nav__link-text {
@@ -101,6 +102,7 @@
   height: 40px;
   background-color: $bg-color-button;
   margin: 0;
+  transform: none;
 }
 
 .additional-nav--about-us .additional-nav__link {
@@ -224,6 +226,7 @@
     height: 50px;
     background-color: $bg-color-button;
     margin: 0;
+    transform: none;
   }
 
   .additional-nav__link {
@@ -280,16 +283,22 @@
   }
 
   .additional-nav--feedback {
-    width: 835px;
+    width: 870px;
     margin: 0 auto;
   }
-  
+
   .additional-nav--feedback .additional-nav__link-text {
     display: block;
+    padding-top: 47px;
   }
-  
+
   .additional-nav--feedback .additional-nav__item {
     @include get-size(68px, 400px);
+    margin-right: 37px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
   }
 
   .additional-nav--feedback .additional-nav__link {
@@ -299,7 +308,7 @@
     &::before {
       display: none;
     }
-    
+
     &--email:hover .additional-nav__ico,
     &--email:focus .additional-nav__ico {
       background-color: #121936;
@@ -313,24 +322,20 @@
 
   .additional-nav--feedback .additional-nav__link--tel svg {
     display: block;
-    width: 28px;
-    height: 28px;
+    width: 34px;
+    height: 34px;
   }
 
   .additional-nav--feedback .additional-nav__ico {
-    width: 68px;
-    height: 68px;
-    margin-right: 23px;
+    width: 90px;
+    height: 90px;
+    margin-right: 31px;
     background-color: #121936;
   }
 
   .additional-nav--feedback .additional-nav__link--email svg {
     display: block;
-    width: 27px;
-    height: 20px;
-  }
-
-  .additional-nav--feedback .additional-nav__link-text {
-    padding-top: 25px;
+    width: 35px;
+    height: 27px;
   }
 }
